@@ -45,6 +45,7 @@ export class OrderService {
             JSON.stringify(order),
             new RequestOptions({ headers: headers })).
             map(reponse => reponse.json())
+            .map(order => order.id)
 
     }
 
